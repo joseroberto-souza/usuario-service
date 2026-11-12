@@ -1,10 +1,13 @@
 spring:
   application:
-    name: usuario-service # Nome idêntico ao arquivo .yml no Git
+    # Define o nome identificador que corresponde ao arquivo de configuração no Git.
+    name: usuario-service
   config:
-    import: "configserver:http://localhost:8888" # Aponta para o Config Server
+    # Importa as configurações remotas do servidor Config Server na inicialização.
+    import: "configserver:http://localhost:8888"
 
 eureka:
   client:
     service-url:
+      # Define o endereço base do servidor Eureka para registrar este microsserviço.
       defaultZone: http://localhost:8761/eureka/
