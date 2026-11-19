@@ -3,6 +3,7 @@ package com.example.usuarioservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * Inicia a aplicação do microsserviço de usuários.
@@ -10,6 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication // Habilita a configuração automática e a inicialização do Spring Boot.
 @EnableDiscoveryClient // Registra este microsserviço no servidor Eureka para descoberta na rede.
+@EnableFeignClients // Habilita a busca automática de interfaces @FeignClient no projeto.
 public class UsuarioServiceApplication {
 
     /**
